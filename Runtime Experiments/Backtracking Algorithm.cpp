@@ -154,18 +154,10 @@ void printGrid(int grid[N][N])
 // ==================================== Driver Code ===============================================
 int main()
 {
-
-    //list<int> listoftimes;
-    // will count the total time taken to solve all sudokus.
-    double total_time = 0;
     
-    // defining the text file where sudokus are stored.
-    fstream file_to_open;
-    
-    // opening the text file with the sudokus. 
+    // Opening the text file containing the sudoku puzzles to be solved. 
     file_to_open.open("Diabolical Sudokus.txt",ios::in);
     
-    // defining a line of the file. 
     string line;
     
 	while(getline(file_to_open,line)){
