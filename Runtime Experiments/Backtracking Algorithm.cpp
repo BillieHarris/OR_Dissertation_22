@@ -159,9 +159,6 @@ int main()
     // will count the total time taken to solve all sudokus.
     double total_time = 0;
     
-    // will be used to count the number of sudokus solved.
-    //int num_of_lines = 0;
-    
     // defining the text file where sudokus are stored.
     fstream file_to_open;
     
@@ -173,12 +170,7 @@ int main()
     
 	while(getline(file_to_open,line)){
 	    
-	    // ================Setting up one sudoku grid. ======================
-	    
-	    //line.erase(remove(line.begin(), line.end(), '\n'), line.end());
-	    
-	    //num_of_lines += 1;
-	    
+	    // ================Setting up one sudoku grid. ======================	    
 	    
 	    // Existing code to convert input from file and convert to an array to be solved. 
 	    int sudoku_grid[9][9];
