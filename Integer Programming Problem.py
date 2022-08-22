@@ -95,7 +95,7 @@ def IP_Solver(grid,m):
     # Only one of each number can be found in a column.
     model.addConstrs((x.sum('*', j, k) == 1 for j in range(m) for k in range(m)), name='Column')
 
-    # Only one of each number can be found in a submatrix. 
+    # Only one of each number can be found in a box. 
     # Here, the bounds are changed to account for the fact that indexing in python starts at 0 and not 1. 
     model.addConstrs((sum(x[i, j, k] for i in range(r*p, (r+1)*p)
                     for j in range(c*p, (c+1)*p)) == 1 for k in range(m) for r in range(p)
