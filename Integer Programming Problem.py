@@ -113,7 +113,8 @@ def IP_Solver(grid,m):
     # Change to true if a visualisation of the solution(s) is required. 
     print_solution = False
     
-    # If the user wishes to visualise any solution(s) that exist then the 
+    # If the user wishes to visualise any solutions that exist, then the relevant solution(s) will be found and used
+    # to call the display_solution function. 
     if print_solution == True and model.status != GRB.Status.INFEASIBLE:
         if num_of_solutions > 1:
             for n in range(num_of_solutions):
@@ -131,6 +132,7 @@ def IP_Solver(grid,m):
 # To open the text file containing the sudoku puzzles.
 f = open("Easy Sudokus.txt")
 
+# Loops through all sudoku puzzles within the file.
 while True:
     line = f.readline()
     
