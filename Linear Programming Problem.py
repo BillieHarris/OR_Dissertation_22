@@ -110,11 +110,10 @@ def LP_solver(grid,m):
     # Since it is a constraint satisfaction (or feasibility) problem, no objective function is required.
     model.optimize()
     
-    # Calls the function check_if_integer to verify id the solution is   
+    # Calls the function check_if_integer to verify if the solution is   
     if model.status != GRB.Status.INFEASIBLE:
         solution = model.getAttr('X', x)
         integer_count = check_if_integer(solution,m,integer_count)
-        #print(solution)
         
     return(integer_count)
         
