@@ -160,6 +160,19 @@ def presolve_check_if_integer(sol,m,grid,integer_count):
     return(integer_count)
 
 def presolve_off_LP_solver(grid,m):
+    '''
+    Determines if the solution to the sudoku puzzle when solved via linear programming (without presolve) 
+    is integer or not.
+    
+    Inputs: 
+    grid: A list of lists representing the starting state of the sudoku puzzle to be solved.
+    m: Integer representing the number of digits 1,...,m placed within the grid, 
+       as well as the number of rows, columns and boxes in the grid. 
+                   
+    Outputs:
+    integer_count: Binary variable - will return 0 if the solution contains fractions, and 
+                   1 if solution is integer.
+    '''
     
     integer_count = 1
 
