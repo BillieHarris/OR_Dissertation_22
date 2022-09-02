@@ -153,7 +153,7 @@ def presolve_check_if_integer(sol,m,grid,integer_count):
                 break
     
     # If at least one fractional value has beeen found, the puzzle is outputed to the user and 
-    # sets the value of integer count to 1.                  
+    # sets the value of integer count to 0.                  
     if is_integer == False:
         integer_count =0
         
