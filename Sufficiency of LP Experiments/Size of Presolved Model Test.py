@@ -51,8 +51,8 @@ def LP_solver(grid,m):
        as well as the number of rows, columns and boxes in the grid.
        
     Outputs:
-    integer_count: Binary variable - will return 1 if the solution contains fractions, and 
-                   0 if solution is integer. 
+    integer_count: Binary variable - will return 0 if the solution contains fractions, and 
+                   1 if solution is integer. 
     '''
     
     int_count = 1
